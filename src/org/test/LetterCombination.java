@@ -9,6 +9,7 @@ public class LetterCombination {
 		int[] arr = {2, 3};
 		LetterCombination letter = new LetterCombination();
 		List<String> result = letter.letterCombiantion(arr);
+		System.out.println(result);
 	}
 
 	public List<String> letterCombiantion(int[] arr){
@@ -22,7 +23,7 @@ public class LetterCombination {
 			if(!list.isEmpty()) {
 				for(int j = 0; j < list.size(); j ++) {
 					for(int k = 0; k < chars[arr[i]].length; k++) {
-						temp.add(list.get(j * k) + String.valueOf(chars[arr[i]]));
+						temp.add(list.get(j) + String.valueOf(chars[arr[i]][k]));
 					}
 				}
 				list = temp;
